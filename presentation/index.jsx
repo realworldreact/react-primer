@@ -438,6 +438,7 @@ export default class Presentation extends React.Component {
           <Slide
             notes={`
               * Someone likely already implemented something you need
+              * Don't Repeat Yourself
             `.trim()}
             >
             <Heading
@@ -451,7 +452,7 @@ export default class Presentation extends React.Component {
             <Text textColor='white'>Combine and re-use components</Text>
             <Appear>
               <List textColor='white'>
-                <ListItem><code>DRY</code>-er code</ListItem>
+                <ListItem><code>D.R.Y.</code>-er code</ListItem>
                 <ListItem>Utilities for the UI</ListItem>
                 <ListItem>Modularized, testable</ListItem>
                 <ListItem>Large and vibrant ecosystem</ListItem>
@@ -512,7 +513,7 @@ export default class Presentation extends React.Component {
               fit={ true }
               lineHeight={1}
               size={1}
-              textColor={reactBlue}
+              textColor={ reactBlue }
               >
               Data
             </Heading>
