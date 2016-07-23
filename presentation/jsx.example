@@ -1,4 +1,4 @@
-const myDivElement = <div className="foo" />;
+const myDivElement = (<div className="foo" />);
 ReactDOM.render(
   myDivElement,
   document.getElementById('example')

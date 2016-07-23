@@ -171,17 +171,17 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Props</ListItem></Appear>
               <Appear><ListItem>State</ListItem></Appear>
               <Appear><ListItem>Events</ListItem></Appear>
+              <Appear><ListItem>LearnYouReact</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide
             notes={`
-              * Declarative means you no longer have to write dom plumbing
+              * Declarative means you no longer have to write DOM plumbing
               * Server folks should get this since its how they normally render
               * XSS protection built in
               * You can drop react into any existing app
               * Its fun! This can not be stressed enough. This is good for morale and recruiting
-              * This is just the start. I will plan another talk for convincing your boss to adopt react
             `.trim()}
             >
             <Heading
@@ -196,17 +196,20 @@ export default class Presentation extends React.Component {
                 <ListItem>Declarative</ListItem>
               </Appear>
               <Appear>
-                <ListItem>Painless iteration path</ListItem>
+                <ListItem>Painless Iteration Path</ListItem>
               </Appear>
               <Appear>
-                <ListItem>Fun (good for morale, good for recruiting)</ListItem>
+                <ListItem>Fun</ListItem>
               </Appear>
             </List>
           </Slide>
 
           <Slide
             notes={`
-            * Very similar to HTML
+              * Markup syntax as apposed to it's own programming language.
+              * Very similar to HTML
+              * Tag Syntax (looks like HTML)
+              * Javascript + XML (not the other way around)
             `.trim()}
             >
             <Heading
@@ -226,16 +229,13 @@ export default class Presentation extends React.Component {
             </Heading>
             <List textColor='white'>
               <Appear>
-                <ListItem>Tag Syntax (looks like HTML)</ListItem>
+                <ListItem>Markup Syntax</ListItem>
               </Appear>
               <Appear>
-                <ListItem>JavaScript + XML (not the other way around)</ListItem>
+                <ListItem>JavaScript with XML</ListItem>
               </Appear>
               <Appear>
-                <ListItem>Has some gotchas, but not dealbreakers</ListItem>
-              </Appear>
-              <Appear>
-                <ListItem>All tags must close or be self-closing</ListItem>
+                <ListItem>Gotchas, not Dealbreakers</ListItem>
               </Appear>
             </List>
           </Slide>
@@ -284,6 +284,8 @@ export default class Presentation extends React.Component {
             bgColor='primary'
             notes={`
               * Note that there are ways around the if else issue
+              * no if-else statements (expressions only)
+              * expressions return values, statements control code flow
             `.trim()}
             transition={['zoom', 'fade']}
             >
@@ -302,10 +304,13 @@ export default class Presentation extends React.Component {
                 </ListItem>
               </Appear>
               <Appear>
-                <ListItem>No if-else (expressions only)</ListItem>
+                <ListItem>No if-else statements </ListItem>
               </Appear>
               <Appear>
                 <ListItem>Must wrap consecutive tags</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>All tags must close or be self-closing</ListItem>
               </Appear>
             </List>
           </Slide>
