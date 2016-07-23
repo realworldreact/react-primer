@@ -1,15 +1,18 @@
-export const Toggle = React.createClass({
-  getInitialState() {
-    return {
-      isOn: false,
+import React from 'react';
+
+export class Toggle extends React.Component {
+  constructor(...args) {
+    super(...args);
+    this.state = {
+      isOn: false
     };
-  },
+    this.toggle = this.toggle.bind(this);
+  }
 
   toggle() {
-    this.setState({
-      isOn: !this.state.isOn,
-    });
-  },
+    // setState can be synchronous or async
+    this.setState({ isOn: !this.state.isOn });
+  }
 
   render() {
     const { isOn } = this.state;
@@ -18,10 +21,11 @@ export const Toggle = React.createClass({
         onClick={this.toggle}
         style={{
           background: isOn ? 'yellow' : 'gray',
-          color: isOn ? 'purple' : 'white',
-        }}>
-        {isOn ? 'On' : 'Off'}
+          color: isOn ? 'purple' : 'white'
+        }}
+        >
+        { isOn ? 'On' : 'Off' }
       </div>
     );
-  },
-});
+  }
+}

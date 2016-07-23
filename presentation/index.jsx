@@ -453,7 +453,6 @@ export default class Presentation extends React.Component {
             <Appear>
               <List textColor='white'>
                 <ListItem><code>D.R.Y.</code>-er code</ListItem>
-                <ListItem>Utilities for the UI</ListItem>
                 <ListItem>Modularized, testable</ListItem>
                 <ListItem>Large and vibrant ecosystem</ListItem>
               </List>
@@ -463,6 +462,7 @@ export default class Presentation extends React.Component {
           <Slide
             notes={`
               * Components define their Contracts(API)
+              * PropTypes tell developers what the component expects to find
             `.trim()}
             >
             <Heading
@@ -507,7 +507,13 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide>
+          <Slide
+            note={`
+            * Let's talk about data
+            * data => markup is a great way to think about react components
+            * what is the least amount of data needed to create markup
+            `.trim()}
+            >
             <Heading
               caps={ true }
               fit={ true }
@@ -542,7 +548,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <List textColor='white'>
               <Appear>
-                <ListItem>Component doesn't care where they come from</ListItem>
+                <ListItem>Component do not care where they come from</ListItem>
               </Appear>
               <Appear>
                 <ListItem>Important when integrating with frameworks</ListItem>
@@ -555,10 +561,11 @@ export default class Presentation extends React.Component {
             lang='jsx'
             ranges={[
               { loc: [0, 100], title: 'Passing Props' },
-              { loc: [3, 15], note: 'Define a component' },
-              { loc: [10, 11], note: 'Access this.props' },
-              { loc: [16, 20] },
-              { loc: [17, 18], note: 'Pass props in as you would HTML attributes' }
+              { loc: [3, 16], note: 'Define a component' },
+              { loc: [11, 12], note: 'Access this.props' },
+              { loc: [17, 20], note: 'Defined this components API shape' },
+              { loc: [21, 25] },
+              { loc: [22, 23], note: 'Pass props in as you would HTML attributes' }
               // ...
             ]}
             transition={[]}
@@ -639,24 +646,17 @@ export default class Presentation extends React.Component {
             lang='jsx'
             ranges={[
               { loc: [0, 100], title: 'Stateful Components' },
-              { loc: [1, 6], note: 'Define the initial state' },
-              { loc: [13, 25] },
-              { loc: [14, 15], note: 'Access state' },
-              { loc: [18, 22], note: 'Set attributes based on state' },
-              { loc: [17, 18], note: 'Set up an event handler to update state' },
-              { loc: [7, 12], note: 'Set up an event handler to update state' }
+              { loc: [5, 8], note: 'Define the initial state' },
+              { loc: [16, 29] },
+              { loc: [17, 18], note: 'Access state' },
+              { loc: [21, 25], note: 'Set attributes based on state' },
+              { loc: [20, 21], note: 'Set up an event handler to update state' },
+              { loc: [11, 15], note: 'Set up an event handler to update state' },
+              { loc: [8, 9], note: 'bind event handler to component instance' }
               // ...
             ]}
             transition={[]}
           />
-
-          <Slide>
-            <CodePane
-              lang='jsx'
-              margin='20px auto'
-              source={require('raw!./state.example')}
-            />
-          </Slide>
 
           <Slide>
             <Heading
@@ -696,7 +696,13 @@ export default class Presentation extends React.Component {
             <EventsHeading />
           </Slide>
 
-          <Slide notes={''.trim()} >
+          <Slide
+            notes={`
+              * synthetic (not actual dom events)
+              * Recycled by React to be reused
+              * don't worry about IE8
+            `.trim()}
+            >
             <Heading
               caps={ true }
               lineHeight={1.5}
@@ -720,22 +726,21 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide notes={`
-          `.trim()}>
-            <CodePane
-              lang='jsx'
-              margin='20px auto'
-              source={require('raw!./events.example')}
-            />
-          </Slide>
-
-          <Slide>
-            <CodePane
-              lang='jsx'
-              margin='20px auto'
-              source={require('raw!./state.example')}
-            />
-          </Slide>
+          <CodeSlide
+            code={require('raw!./events-object.example')}
+            lang='jsx'
+            margin='20px auto'
+            notes={`
+              * none
+            `.trim()}
+            ranges={[
+              { loc: [0, 18] },
+              { loc: [14, 20] },
+              { loc: [8, 11], note: 'Similar shape to DOM event objects' },
+              { loc: [8, 11], note: 'preventDefault, target, etc' }
+            ]}
+            transition={[]}
+          />
 
           <Slide transition={['spin', 'slide']}>
             <Heading

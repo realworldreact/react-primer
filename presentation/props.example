@@ -1,18 +1,23 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-const Header = React.createClass({
+class Header extends React.Component {
   render() {
     return (
       <div className='Header'>
         <img
+          alt='Logo'
           src='/images/logo.png'
-          alt='Logo' />
+        />
         <h1>{this.props.title}</h1>
       </div>
     );
-  },
-});
+  }
+}
+
+Header.propTypes = {
+  title: React.PropTypes.string.isRequired
+};
 
 render(
   <Header title='My Super Header' />,
