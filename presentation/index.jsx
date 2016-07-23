@@ -28,7 +28,8 @@ const red = '#ff4343';
 
 const images = {
   fccLogo: require('../assets/fcc-puck-logo.png'),
-  rwrLogo: require('../assets/rwr-logo-large.png')
+  rwrLogo: require('../assets/rwr-logo-large.png'),
+  rethink: require('../assets/rethink.png')
 };
 
 preloader(images);
@@ -332,13 +333,14 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide>
-            <CodePane
-              lang='jsx'
-              margin='20px auto'
-              source={require('raw!./component.example')}
-            />
-          </Slide>
+          <CodeSlide
+            code={require('raw!./component.example')}
+            lang='jsx'
+            ranges={[
+              { loc: [2, 12], title: 'A Component' }
+            ]}
+            transition={['zoom', 'fade']}
+          />
 
           <Slide
             notes={`
@@ -356,15 +358,15 @@ export default class Presentation extends React.Component {
             </Heading>
             <List textColor='white'>
               <Appear>
-                <ListItem>Original <code>React.createClass</code></ListItem>
+                <ListItem>Legacy<code>React.createClass</code></ListItem>
               </Appear>
               <Appear>
                 <ListItem>
-                  ES6 class syntax, i.e. extned <code>React.Component</code>
+                  ES6 class syntax, i.e. extend <code>React.Component</code>
                 </ListItem>
               </Appear>
               <Appear>
-                <ListItem>Functional (Stateless)</ListItem>
+                <ListItem>Functional (Read: Stateless)</ListItem>
               </Appear>
             </List>
           </Slide>
@@ -376,7 +378,8 @@ export default class Presentation extends React.Component {
               { loc: [0, 100], title: 'Defining Components' },
               { loc: [2, 12], note: 'React.createClass' },
               { loc: [13, 23], note: 'class extends React.Component' },
-              { loc: [24, 30], note: 'Functional (Stateless)' }
+              { loc: [24, 30], note: 'Functional (Stateless)' },
+              { loc: [24, 30], note: 'The Future is functional!' }
               // ...
             ]}
             transition={[]}
@@ -387,23 +390,21 @@ export default class Presentation extends React.Component {
               caps={ true }
               lineHeight={1.5}
               size={4}
-              textColor='white'
+              textColor={ reactBlue }
               >
               Benefits
             </Heading>
-            <Appear>
-              <List textColor='white'>
-                <ListItem>Encapsulation</ListItem>
-                <ListItem>Composability</ListItem>
-              </List>
-            </Appear>
+            <List textColor='white'>
+              <Appear><ListItem>Encapsulation</ListItem></Appear>
+              <Appear><ListItem>Composability</ListItem></Appear>
+              <Appear><ListItem>Definable API Shape (Contract)</ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide
             notes={`
               * Encapsulation is a benefit, but it does tend to fly in the face of what many people used to think was best practices
               * View-related functionality is key here. Only the functionality necessary for our UI is encompassed by React
-              * Putting data binding here is a tease. we won't be talking about it yet but we will later
             `.trim()}
             >
             <Heading
@@ -419,12 +420,19 @@ export default class Presentation extends React.Component {
             </Text>
             <Appear>
               <List textColor='white'>
-                <ListItem>HTML (JSX)</ListItem>
+                <ListItem>HTML in the form of JSX</ListItem>
                 <ListItem>Derived values</ListItem>
                 <ListItem>Event handlers</ListItem>
-                <ListItem>Modularized, testable</ListItem>
+                <ListItem>Modularized and testable</ListItem>
               </List>
             </Appear>
+          </Slide>
+
+          <Slide>
+            <Image
+              src={ images.rethink }
+              width={900}
+            />
           </Slide>
 
           <Slide
@@ -443,10 +451,35 @@ export default class Presentation extends React.Component {
             <Text textColor='white'>Combine and re-use components</Text>
             <Appear>
               <List textColor='white'>
-                <ListItem>DRYer code</ListItem>
+                <ListItem><code>DRY</code>-er code</ListItem>
                 <ListItem>Utilities for the UI</ListItem>
                 <ListItem>Modularized, testable</ListItem>
                 <ListItem>Large and vibrant ecosystem</ListItem>
+              </List>
+            </Appear>
+          </Slide>
+
+          <Slide
+            notes={`
+              * Components define their Contracts(API)
+            `.trim()}
+            >
+            <Heading
+              caps={ true }
+              lineHeight={1.5}
+              size={4}
+              textColor='white'
+              >
+              API Shape (Contract)
+            </Heading>
+            <Text textColor='white'>
+              Components tell developers what they expect
+            </Text>
+            <Appear>
+              <List textColor='white'>
+                <ListItem>PropTypes define data types</ListItem>
+                <ListItem>Gives developer warnings and errors</ListItem>
+                <ListItem>Excellent developer experience</ListItem>
               </List>
             </Appear>
           </Slide>
