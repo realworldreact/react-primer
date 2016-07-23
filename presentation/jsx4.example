@@ -1,4 +1,3 @@
-// This is all just javascript
 const isAdmin = false;
 
 // The link to the admin area will not re rendered

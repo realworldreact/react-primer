@@ -257,28 +257,25 @@ export default class Presentation extends React.Component {
             transition={['zoom', 'fade']}
           />
 
-          <Slide
+          <CodeSlide
             bgColor='primary'
+            code={require('raw!./jsx4.example')}
+            lang='jsx'
             notes={`
               * This is all just js
-              * We'll talk a lot more about this later, so for now don't worry
             `.trim()}
+            ranges={[
+              {
+                loc: [0, 14],
+                title: 'First class JavaScript'
+              },
+              {
+                loc: [0, 14],
+                note: 'This is all just JavaScript'
+              }
+            ]}
             transition={['zoom', 'fade']}
-            >
-            <Heading
-              caps={ true }
-              lineHeight={1.5}
-              size={4}
-              textColor='white'
-              >
-              First class JavaScript
-            </Heading>
-            <CodePane
-              lang='jsx'
-              margin='20px auto'
-              source={require('raw!./jsx4.example')}
-            />
-          </Slide>
+          />
 
           <Slide
             bgColor='primary'
@@ -304,13 +301,13 @@ export default class Presentation extends React.Component {
                 </ListItem>
               </Appear>
               <Appear>
-                <ListItem>No if-else statements </ListItem>
+                <ListItem>No <code>if-else</code> statements </ListItem>
               </Appear>
               <Appear>
-                <ListItem>Must wrap consecutive tags</ListItem>
+                <ListItem>Must Wrap Consecutive Tags</ListItem>
               </Appear>
               <Appear>
-                <ListItem>All tags must close or be self-closing</ListItem>
+                <ListItem>All Tags Must Close or Self-Close</ListItem>
               </Appear>
             </List>
           </Slide>
