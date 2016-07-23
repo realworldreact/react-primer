@@ -742,6 +742,80 @@ export default class Presentation extends React.Component {
             transition={[]}
           />
 
+          <Slide
+            notes={`
+              * none
+            `.trim()}
+            >
+            <Heading
+              caps={ true }
+              lineHeight={1.5}
+              size={1}
+              textColor={ reactBlue }
+              >
+              LearnYouReact
+            </Heading>
+          </Slide>
+          <Slide
+            notes={`
+              * If array is re-arranged the individual components are not
+              * destroyed
+            `.trim()}
+            >
+            <a
+              href='https://facebook.github.io/react/docs/multiple-components.html#dynamic-children'
+              style={{ textDecoration: 'none' }}
+              target='_blank'
+              >
+              <Heading
+                caps={ true }
+                lineHeight={1.5}
+                size={1}
+                textColor='white'
+                >
+                Special Prop: <code>key</code>
+              </Heading>
+              <List textColor='white'>
+                <Appear>
+                  <ListItem>
+                    Dynamic Children (Array of elements)
+                  </ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>
+                    Performant re-arrangement
+                  </ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>
+                    ID's for React
+                  </ListItem>
+                </Appear>
+              </List>
+            </a>
+          </Slide>
+
+          <CodeSlide
+            code={require('raw!./key.example')}
+            lang='jsx'
+            margin='20px auto'
+            notes={`
+              * Key is unique to each element
+              * do not use array index
+              *
+            `.trim()}
+            ranges={[
+              { loc: [3, 10], title: 'Dynamic Elements' },
+              { loc: [3, 15] },
+              { loc: [16, 24], note: '' },
+              { loc: [5, 6] },
+              { loc: [6, 7], note: '' },
+              { loc: [7, 12], note: '' },
+              { loc: [9, 10], note: 'Special' }
+            ]}
+            transition={[]}
+          />
+
           <Slide transition={['spin', 'slide']}>
             <Heading
               caps={ true }
