@@ -29,7 +29,8 @@ const red = '#ff4343';
 const images = {
   fccLogo: require('../assets/fcc-puck-logo.png'),
   rwrLogo: require('../assets/rwr-logo-large.png'),
-  rethink: require('../assets/rethink.png')
+  rethink: require('../assets/rethink.png'),
+  happyTrees: require('../assets/no-mistakes-just-happy-little-trees.jpg')
 };
 
 preloader(images);
@@ -747,14 +748,31 @@ export default class Presentation extends React.Component {
               * none
             `.trim()}
             >
-            <Heading
-              caps={ true }
-              lineHeight={1.5}
-              size={1}
-              textColor={ reactBlue }
+            <a
+              href='https://github.com/kohei-takata/learnyoureact'
+              style={{ textDecoration: 'none' }}
+              target='_blank'
               >
-              LearnYouReact
-            </Heading>
+              <Heading
+                caps={ true }
+                lineHeight={1.5}
+                size={1}
+                textColor={ reactBlue }
+                >
+                LearnYouReact
+              </Heading>
+              <div style={{ color: 'white', margin: '0 0 20px' }}>
+                --------
+              </div>
+              <Text
+                bold={ true }
+                margin='20px 0px 0px'
+                textColor='white'
+                textSize='1.5em'
+                >
+                Beware, Here Be Dragons
+              </Text>
+            </a>
           </Slide>
           <Slide
             notes={`
@@ -825,6 +843,12 @@ export default class Presentation extends React.Component {
               >
               Questions?
             </Heading>
+          </Slide>
+          <Slide transition={['spin', 'slide']}>
+            <Image
+              src={ images.happyTrees }
+              width={500}
+            />
           </Slide>
 
         </Deck>
