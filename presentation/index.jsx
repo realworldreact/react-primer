@@ -834,6 +834,24 @@ export default class Presentation extends React.Component {
             transition={[]}
           />
 
+          <Slide
+            notes={`
+              * none
+            `.trim()}
+            >
+            <Heading
+              caps={ true }
+              lineHeight={1.5}
+              size={1}
+              textColor='white'
+              >
+              Lesson 8 may not work
+            </Heading>
+          </Slide>
+
+          {
+            // end presentation
+          }
           <Slide transition={['spin', 'slide']}>
             <Heading
               caps={ true }
@@ -844,13 +862,18 @@ export default class Presentation extends React.Component {
               Questions?
             </Heading>
           </Slide>
-          <Slide transition={['spin', 'slide']}>
+          <Slide
+            note={`
+              * There are no mistakes in life
+              * just happy little trees
+            `.trim()}
+            transition={['spin', 'slide']}
+            >
             <Image
               src={ images.happyTrees }
               width={500}
             />
           </Slide>
-
         </Deck>
       </Spectacle>
     );
