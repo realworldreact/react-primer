@@ -26,7 +26,10 @@ require('./index.css');
 
 const red = '#ff4343';
 
-const images = { logo: require('../assets/rwr-logo-large.png') };
+const images = {
+  fccLogo: require('../assets/fcc-puck-logo.png'),
+  rwrLogo: require('../assets/rwr-logo-large.png')
+};
 
 preloader(images);
 
@@ -62,29 +65,89 @@ export default class Presentation extends React.Component {
               lineHeight={1.5}
               size={1}
               >
-              An introduction
+              A primer
             </Heading>
             <div style={{ margin: '0 0 20px' }}>
               --------
             </div>
-            <Text
-              bold={ true }
-              margin='20px 0px 0px'
-              textColor='white'
-              textSize='1.5em'
+            <a
+              href='//BerkeleyTrue.github.io/nodeschoolsf-july'
+              target='_blank'
               >
-              Ian Sinnott
-            </Text>
+              <Text
+                bold={ true }
+                margin='20px 0px 0px'
+                textColor='white'
+                textSize='1.5em'
+                >
+                BerkeleyTrue.github.io/nodeschoolsf-july
+              </Text>
+            </a>
+          </Slide>
+
+          <Slide>
+            <Heading
+              caps={ true }
+              lineHeight={1.5}
+              size={4}
+              textColor={reactBlue}
+              >
+              Who are you?
+              <br />
+              Why should I listen to you?
+              <br />
+              I want cookies.
+            </Heading>
+          </Slide>
+
+          {
+            /* logos */
+          }
+
+          <Slide
+            bgColor='primary'
+            notes={`
+              * CTO of FreeCodeCamp
+              * We’re an open source community that helps you learn to code.
+              * self-paced coding challenges
+              * build projects, and earn certificates
+              * We also connect you with people in your city so you can code together.
+              * Thousands of people have gotten jobs after joining our open source community.
+            `.trim()
+            }
+            transition={[ 'zoom' ]}
+            >
+            <a
+              href='https://www.freecodecamp.com'
+              target='_blank'
+              >
+              <Image
+                src={images.fccLogo}
+                width={600}
+              />
+            </a>
           </Slide>
 
           <Slide
             bgColor='primary'
+            notes={`
+              * Partner and Teacher at RWR
+              * Talks/workshops about React in real-world, production applications.
+              * Meetups right here in the city
+              * Workshops all over the world
+            `.trim()
+            }
             transition={['zoom']}
             >
-            <Image
-              src={images.logo}
-              width={600}
-            />
+            <a
+              href='https://www.meetup.com/Real-World-React'
+              target='_blank'
+              >
+              <Image
+                src={images.rwrLogo}
+                width={600}
+              />
+            </a>
           </Slide>
 
           <Slide
