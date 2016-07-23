@@ -27,7 +27,7 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{ 
+    loaders: [{
       test: /\.md$/,
       loader: "html-loader!markdown-loader?gfm=false"
     }, {

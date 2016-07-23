@@ -7,11 +7,11 @@ const { screen, print } = createTheme({
   primary: '#222',
   secondary: reactBlue,
   tertiary: 'white',
-  quartenary: reactBlue,
+  quartenary: reactBlue
 });
 
 // Can use this merging strategy to override defaults. For source, see:
-// https://github.com/FormidableLabs/spectacle/blob/master/src/themes/default/screen.js
+// github.com/FormidableLabs/spectacle/blob/master/src/themes/default/screen.js
 merge(screen, {
   global: {},
   fullscreen: {},
@@ -19,12 +19,12 @@ merge(screen, {
   progress: {
     bar: {
       container: {
-        height: '5px',
+        height: '5px'
       },
       bar: {
-        borderRadius: '3px',
-      },
-    },
+        borderRadius: '3px'
+      }
+    }
   },
   components: {
     codePane: {
@@ -34,17 +34,17 @@ merge(screen, {
         fontWeight: 'normal',
         minWidth: '100%',
         maxWidth: 800,
-        maxHeight: '80vh',
+        maxHeight: '80vh'
       },
       code: {
         textAlign: 'left',
-        fontWeight: 'normal',
-      },
-    },
-  },
+        fontWeight: 'normal'
+      }
+    }
+  }
 });
 
 export default {
   screen,
-  print,
+  print
 };

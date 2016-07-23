@@ -20,7 +20,7 @@ module.exports = {
     new webpack.NoErrorsPlugin()
   ],
   module: {
-    loaders: [{ 
+    loaders: [{
       test: /\.md$/,
       loader: "html-loader!markdown-loader?gfm=false"
     }, {
