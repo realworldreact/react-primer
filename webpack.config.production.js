@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/dist/"
+    publicPath: "/nodeschoolsf-july/"
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
