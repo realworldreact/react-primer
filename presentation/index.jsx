@@ -461,9 +461,15 @@ export default class Presentation extends React.Component {
             <Text textColor='white'>Combine and re-use components</Text>
             <Appear>
               <List textColor='white'>
-                <ListItem><code>D.R.Y.</code>-er code</ListItem>
-                <ListItem>Modularized, testable</ListItem>
-                <ListItem>Large and vibrant ecosystem</ListItem>
+                <Appear>
+                  <ListItem><code>D.R.Y.</code>-er code</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Modularized, testable</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Large and vibrant ecosystem</ListItem>
+                </Appear>
               </List>
             </Appear>
           </Slide>
@@ -487,9 +493,15 @@ export default class Presentation extends React.Component {
             </Text>
             <Appear>
               <List textColor='white'>
-                <ListItem>PropTypes define data types</ListItem>
-                <ListItem>Gives developer warnings and errors</ListItem>
-                <ListItem>Excellent developer experience</ListItem>
+                <Appear>
+                  <ListItem>PropTypes define data types</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Gives developer warnings and errors</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Excellent developer experience</ListItem>
+                </Appear>
               </List>
             </Appear>
           </Slide>
