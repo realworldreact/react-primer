@@ -745,37 +745,6 @@ export default class Presentation extends React.Component {
 
           <Slide
             notes={`
-              * none
-            `.trim()}
-            >
-            <a
-              href='https://github.com/kohei-takata/learnyoureact'
-              style={{ textDecoration: 'none' }}
-              target='_blank'
-              >
-              <Heading
-                caps={ true }
-                lineHeight={1.5}
-                size={1}
-                textColor={ reactBlue }
-                >
-                LearnYouReact
-              </Heading>
-              <div style={{ color: 'white', margin: '0 0 20px' }}>
-                --------
-              </div>
-              <Text
-                bold={ true }
-                margin='20px 0px 0px'
-                textColor='white'
-                textSize='1.5em'
-                >
-                Beware, Here Be Dragons
-              </Text>
-            </a>
-          </Slide>
-          <Slide
-            notes={`
               * If array is re-arranged the individual components are not
               * destroyed
             `.trim()}
@@ -833,21 +802,6 @@ export default class Presentation extends React.Component {
             ]}
             transition={[]}
           />
-
-          <Slide
-            notes={`
-              * none
-            `.trim()}
-            >
-            <Heading
-              caps={ true }
-              lineHeight={1.5}
-              size={1}
-              textColor='white'
-              >
-              Lesson 8 may not work
-            </Heading>
-          </Slide>
 
           {
             // end presentation
