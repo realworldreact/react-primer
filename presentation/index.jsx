@@ -421,10 +421,18 @@ export default class Presentation extends React.Component {
             </Text>
             <Appear>
               <List textColor='white'>
-                <ListItem>HTML in the form of JSX</ListItem>
-                <ListItem>Derived values</ListItem>
-                <ListItem>Event handlers</ListItem>
-                <ListItem>Modularized and testable</ListItem>
+                <Appear>
+                  <ListItem>HTML in the form of JSX</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Derived values</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Event handlers</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Modularized and testable</ListItem>
+                </Appear>
               </List>
             </Appear>
           </Slide>
