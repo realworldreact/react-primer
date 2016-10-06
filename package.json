@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "build": "NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && cp gh-pages.index.html dist/index.html && node gh-pages",
+    "deploy": "npm run clean && npm run build && cp gh-pages.index.html dist/index.html && node gh-pages",
     "start": "NODE_ENV=development node server.js"
   },
   "author": "",
