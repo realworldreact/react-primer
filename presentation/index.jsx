@@ -359,7 +359,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <List textColor='white'>
               <Appear>
-                <ListItem>Legacy<code>React.createClass</code></ListItem>
+                <ListItem>Legacy <code>React.createClass</code></ListItem>
               </Appear>
               <Appear>
                 <ListItem>
