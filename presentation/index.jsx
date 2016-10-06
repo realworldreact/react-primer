@@ -73,7 +73,7 @@ export default class Presentation extends React.Component {
               --------
             </div>
             <a
-              href='//BerkeleyTrue.github.io/nodeschoolsf-july'
+              href='//realworldreact.github.io/react-primer'
               target='_blank'
               >
               <Text
@@ -82,7 +82,7 @@ export default class Presentation extends React.Component {
                 textColor='white'
                 textSize='1.5em'
                 >
-                BerkeleyTrue.github.io/nodeschoolsf-july
+                RealWorldReact.github.io/react-primer
               </Text>
             </a>
           </Slide>
