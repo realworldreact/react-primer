@@ -1,5 +1,5 @@
 import { render } from 'react-dom';
 import App from './App.js';
-const el = documenet.getElementById('root');
 
+const el = document.getElementById('root');
 render(<App />, el);
