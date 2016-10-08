@@ -401,13 +401,6 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide>
-            <Image
-              src={ images.rethink }
-              width={900}
-            />
-          </Slide>
-
           <Slide
             notes={`
               * Encapsulation is a benefit, but it does tend to fly in the face of what many people used to think was best practices
@@ -441,6 +434,13 @@ export default class Presentation extends React.Component {
                 </Appear>
               </List>
             </Appear>
+          </Slide>
+
+          <Slide>
+            <Image
+              src={ images.rethink }
+              width={900}
+            />
           </Slide>
 
           <Slide
