@@ -1,4 +1,0 @@
-// Some jQuery...
-$("li").each(function(i, element) {
-  $(element).html("This is element #" + i); // Side effect!!
-});

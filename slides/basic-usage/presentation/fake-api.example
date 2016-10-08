@@ -1,5 +1,0 @@
-componentDidMount() {
-  $.getJSON('/api/items', items => {
-    this.setState({ items });
-  });
-},
