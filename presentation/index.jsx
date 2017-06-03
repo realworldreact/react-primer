@@ -10,7 +10,6 @@ import {
   ListItem,
   List,
   Slide,
-  Spectacle,
   Text
 } from 'spectacle';
 
@@ -41,6 +40,7 @@ export default class Presentation extends React.Component {
       <Deck
         controls={false}
         progress='bar'
+        theme={ theme }
         transition={['zoom', 'slide']}
         transitionDuration={500}
         >
