@@ -6,6 +6,7 @@ export class Toggle extends React.Component {
     this.state = {
       isOn: false
     };
+    this.toggle = this.toggle.bind(this);
   }
 
   toggle() {

@@ -85,71 +85,37 @@ export default class Presentation extends React.Component {
             </Text>
           </a>
         </Slide>
-
         <Slide>
           <Heading
-            caps={ true }
-            lineHeight={1.5}
-            size={4}
-            textColor={reactBlue}
+            textColor='secondary'
             >
-            Who are you?
-            <br />
-            Why should I listen to you?
-            <br />
-            I want cookies.
+            Who I Am
           </Heading>
+          <List
+            bold={ true }
+            caps={ false }
+            >
+            <ListItem>
+              internet('BerkeleyTrue');
+            </ListItem>
+            <ListItem>
+              freeCodeCamp('developer');
+            </ListItem>
+            <ListItem>
+              realWorldReact('teacher');
+            </ListItem>
+            <ListItem>
+              const isRxJSAdvocate = true;
+            </ListItem>
+            <ListItem>
+              taughtBy('internet');
+            </ListItem>
+          </List>
         </Slide>
 
         {
           /* logos */
         }
-
-        <Slide
-          bgColor='primary'
-          notes={`
-            * CTO of FreeCodeCamp
-            * We’re an open source community that helps you learn to code.
-            * self-paced coding challenges
-            * build projects, and earn certificates
-            * We also connect you with people in your city so you can code together.
-            * Thousands of people have gotten jobs after joining our open source community.
-          `.trim()
-          }
-          transition={[ 'zoom' ]}
-          >
-          <a
-            href='https://www.freecodecamp.com'
-            target='_blank'
-            >
-            <Image
-              src={images.fccLogo}
-              width={600}
-            />
-          </a>
-        </Slide>
-
-        <Slide
-          bgColor='primary'
-          notes={`
-            * Partner and Teacher at RWR
-            * Talks/workshops about React in real-world, production applications.
-            * Meetups right here in the city
-            * Workshops all over the world
-          `.trim()
-          }
-          transition={['zoom']}
-          >
-          <a
-            href='https://www.meetup.com/Real-World-React'
-            target='_blank'
-            >
-            <Image
-              src={images.rwrLogo}
-              width={600}
-            />
-          </a>
-        </Slide>
 
         <Slide
           notes={`
@@ -343,8 +309,6 @@ export default class Presentation extends React.Component {
 
         <Slide
           notes={`
-            * For presentations we will use React.createClass syntax for simplicity
-            * There will be exercises and of course you can use any syntax you prefer
           `.trim()}
           >
           <Heading
@@ -356,9 +320,6 @@ export default class Presentation extends React.Component {
             Creating Components
           </Heading>
           <List textColor='white'>
-            <Appear>
-              <ListItem>Legacy <code>React.createClass</code></ListItem>
-            </Appear>
             <Appear>
               <ListItem>
                 ES6 class syntax, i.e. extend <code>React.Component</code>
@@ -375,11 +336,9 @@ export default class Presentation extends React.Component {
           lang='jsx'
           ranges={[
             { loc: [0, 100], title: 'Defining Components' },
-            { loc: [2, 12], note: 'React.createClass' },
-            { loc: [13, 23], note: 'class extends React.Component' },
-            { loc: [24, 30], note: 'Functional (Stateless)' },
-            { loc: [24, 30], note: 'The Future is functional!' }
-            // ...
+            { loc: [2, 12], note: 'Class extends React.Component' },
+            { loc: [13, 19], note: 'Functional (Stateless)' },
+            { loc: [13, 19], note: 'The Future is functional!' }
           ]}
           transition={[]}
         />
@@ -678,15 +637,6 @@ export default class Presentation extends React.Component {
         />
 
         <Slide>
-          <Heading
-            caps={ true }
-            fit={ true }
-            lineHeight={1}
-            size={4}
-            textColor='white'
-            >
-            Rule of thumb
-          </Heading>
           <Appear>
             <Heading
               caps={ true }
