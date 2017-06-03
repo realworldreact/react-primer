@@ -18,10 +18,10 @@
     "lodash": "^4.5.0",
     "normalize.css": "3.0.3",
     "pleasejs": "^0.4.2",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "spectacle": "^1.0.0",
-    "spectacle-code-slide": "0.1.8"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "spectacle": "^2.1.0",
+    "spectacle-code-slide": "^0.4.0"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
